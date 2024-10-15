@@ -1,0 +1,14 @@
+[Unit]
+Description=Ceremony Client Go App Service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+WorkingDirectory=/root/ceremonyclient/node
+ExecStart=/root/ceremonyclient/node/node-2.0.0.4-linux-amd64
+KillSignal=SIGINT
+TimeoutStopSec=30s
+
+[Install]
+WantedBy=multi-user.target
